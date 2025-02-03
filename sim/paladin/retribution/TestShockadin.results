@@ -99,12 +99,12 @@ character_stats_results: {
 stat_weights_results: {
  key: "TestShockadin-Phase2-Lvl40-StatWeights-Default"
  value: {
-  weights: 0.77276
-  weights: 0.33411
+  weights: 0.77346
+  weights: 0.1495
   weights: 0
   weights: 0
   weights: 0
-  weights: 0.18461
+  weights: 0.18441
   weights: 0
   weights: 0
   weights: 0
@@ -112,13 +112,13 @@ stat_weights_results: {
   weights: 0
   weights: 0
   weights: 0
-  weights: 1.67452
-  weights: 0.16217
+  weights: 1.75665
+  weights: 0.16744
   weights: 0
   weights: 0
-  weights: 0.31932
-  weights: 5.68179
-  weights: 4.93863
+  weights: 0.31961
+  weights: 5.7172
+  weights: 4.78719
   weights: 0
   weights: 0
   weights: 0
@@ -148,12 +148,12 @@ stat_weights_results: {
 stat_weights_results: {
  key: "TestShockadin-Phase5-Lvl60-StatWeights-Default"
  value: {
-  weights: 0.51283
-  weights: 0.33434
+  weights: 0.51345
+  weights: 2.16785
   weights: 0
   weights: 0
   weights: 0
-  weights: 1.44861
+  weights: 1.44366
   weights: 0
   weights: 0
   weights: 0
@@ -161,13 +161,13 @@ stat_weights_results: {
   weights: 0
   weights: 0
   weights: 0
-  weights: 2.38791
-  weights: 9.27131
+  weights: 1.97231
+  weights: 10.39248
   weights: 0
   weights: 0
-  weights: 0.18427
-  weights: 8.11073
-  weights: 22.51063
+  weights: 0.18449
+  weights: 10.80471
+  weights: 21.69555
   weights: 0
   weights: 0
   weights: 0
@@ -204,8 +204,8 @@ dps_results: {
 dps_results: {
  key: "TestShockadin-Phase2-Lvl40-Average-Default"
  value: {
-  dps: 546.17257
-  tps: 570.69014
+  dps: 546.03637
+  tps: 570.53404
  }
 }
 dps_results: {
@@ -295,8 +295,8 @@ dps_results: {
 dps_results: {
  key: "TestShockadin-Phase2-Lvl40-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 512.71559
-  tps: 537.04384
+  dps: 515.03707
+  tps: 539.46536
  }
 }
 dps_results: {
@@ -337,8 +337,8 @@ dps_results: {
 dps_results: {
  key: "TestShockadin-Phase5-Lvl60-Average-Default"
  value: {
-  dps: 4001.99198
-  tps: 4087.00028
+  dps: 3987.06918
+  tps: 4072.99847
  }
 }
 dps_results: {
@@ -428,7 +428,7 @@ dps_results: {
 dps_results: {
  key: "TestShockadin-Phase5-Lvl60-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 3772.17905
-  tps: 3857.78579
+  dps: 3759.09639
+  tps: 3845.57589
  }
 }

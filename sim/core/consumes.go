@@ -1395,17 +1395,17 @@ func (character *Character) newStratholmeHolyWaterSpell(sharedTimer *Timer) *Spe
 	}
 	config := character.newBasicExplosiveSpellConfig(explosiveConfig)
 	var outcomeMagicHitAndBaseSpellCrit OutcomeApplier
+	config.ExtraCastCondition = func(sim *Simulation, target *Unit) bool {
+		for _, aoeTarget := range sim.Encounter.TargetUnits {
+			if aoeTarget.MobType == proto.MobType_MobTypeUndead {
+				return true
+			}
+		}
+		return false
+	}
 	config.ApplyEffects = func(sim *Simulation, target *Unit, spell *Spell) {
 		for _, aoeTarget := range sim.Encounter.TargetUnits {
-			damageMultiplier := spell.GetDamageMultiplier()
-			additiveMultiplierPct := spell.GetDamageMultiplierAdditive()
-			if aoeTarget.MobType != proto.MobType_MobTypeUndead {
-				spell.SetMultiplicativeDamageBonus(0)
-				spell.SetAdditiveDamageBonus(0)
-			}
 			spell.CalcAndDealDamage(sim, aoeTarget, sim.Roll(explosiveConfig.MinDamage, explosiveConfig.MaxDamage), outcomeMagicHitAndBaseSpellCrit)
-			spell.SetMultiplicativeDamageBonus(damageMultiplier)
-			spell.ApplyAdditiveDamageBonus(additiveMultiplierPct)
 		}
 	}
 	holyWaterSpell := character.GetOrRegisterSpell(config)

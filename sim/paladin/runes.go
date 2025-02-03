@@ -108,9 +108,16 @@ func (paladin *Paladin) registerTheArtOfWar() {
 		return
 	}
 
-	cdReduction := time.Second*2
+	actionID := core.ActionID{SpellID: 426157}
+	paladin.artOfWarDelayAura = paladin.RegisterAura(core.Aura{
+		ActionID: actionID,
+		Label:    "The Art of War Delay",
+		Duration: time.Millisecond * time.Duration(paladin.Options.ExorcismResetDelayMs),
+	})
+
+	cdReduction := time.Second * 2
 	aowSpell := paladin.RegisterSpell(core.SpellConfig{
-		ActionID: core.ActionID{SpellID: 426157},
+		ActionID: actionID,
 		Flags:    core.SpellFlagPassiveSpell,
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 			timeToReady := paladin.exorcismCooldown.TimeToReady(sim)
@@ -119,6 +126,10 @@ func (paladin *Paladin) registerTheArtOfWar() {
 
 			if sim.Log != nil {
 				paladin.Log(sim, "The Art of War reduced Exorcism cooldown by %s (%s -> %s)", actualReduction, timeToReady, newTimeToReady)
+			}
+
+			if newTimeToReady <= 0 && actualReduction > time.Millisecond*400 && paladin.Options.ExorcismResetDelayMs > 0 {
+				paladin.artOfWarDelayAura.Activate(sim)
 			}
 
 			paladin.exorcismCooldown.Set(sim.CurrentTime + newTimeToReady)

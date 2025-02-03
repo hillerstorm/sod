@@ -221,6 +221,7 @@ export const PresetBuildTwisting = PresetUtils.makePresetBuild('Twisting', {
 	talents: RetTalents,
 	rotation: APLTwisting,
 	options: {
+		exorcismResetDelayMs: 300,
 		isUsingCrusaderStrikeStopAttack: true,
 		isUsingDivineStormStopAttack: true,
 		isUsingExorcismStopAttack: true,
@@ -233,6 +234,7 @@ export const PresetBuildP5SealStacking = PresetUtils.makePresetBuild('P5 Seal St
 	talents: RetTalents,
 	rotation: APLP5SealStacking6CF,
 	options: {
+		exorcismResetDelayMs: 300,
 		isUsingCrusaderStrikeStopAttack: false,
 		isUsingDivineStormStopAttack: false,
 		isUsingExorcismStopAttack: false,
@@ -245,6 +247,7 @@ export const PresetBuildP5Exodin = PresetUtils.makePresetBuild('P5 Exodin', {
 	talents: RetTalents,
 	rotation: APLP5Exodin6CF,
 	options: {
+		exorcismResetDelayMs: 300,
 		isUsingCrusaderStrikeStopAttack: false,
 		isUsingDivineStormStopAttack: false,
 		isUsingExorcismStopAttack: false,
@@ -257,6 +260,7 @@ export const PresetBuildP5Shockadin = PresetUtils.makePresetBuild('P5 Shockadin'
 	talents: ShockadinTalents,
 	rotation: APLShockadin,
 	options: {
+		exorcismResetDelayMs: 300,
 		isUsingCrusaderStrikeStopAttack: false,
 		isUsingDivineStormStopAttack: false,
 		isUsingExorcismStopAttack: false,
@@ -269,6 +273,7 @@ export const PresetBuildP6Exodin = PresetUtils.makePresetBuild('P6 Exodin', {
 	talents: RetTalents,
 	rotation: APLP6Exodin,
 	options: {
+		exorcismResetDelayMs: 300,
 		isUsingCrusaderStrikeStopAttack: false,
 		isUsingDivineStormStopAttack: false,
 		isUsingExorcismStopAttack: false,
@@ -286,6 +291,7 @@ export const DefaultTalents = TalentPresets[Phase.Phase6][0];
 export const DefaultOptions = RetributionPaladinOptions.create({
 	aura: PaladinAura.SanctityAura,
 	primarySeal: PaladinSeal.Martyrdom,
+	exorcismResetDelayMs: 300,
 });
 
 export const DefaultConsumes = Consumes.create({
@@ -295,7 +301,7 @@ export const DefaultConsumes = Consumes.create({
 	defaultPotion: Potions.MajorManaPotion,
 	dragonBreathChili: true,
 	enchantedSigil: EnchantedSigil.WrathOfTheStormSigil,
-	fillerExplosive: Explosive.ExplosiveUnknown,
+	fillerExplosive: Explosive.ExplosiveStratholmeHolyWater,
 	firePowerBuff: FirePowerBuff.ElixirOfGreaterFirepower,
 	flask: Flask.FlaskOfMadness,
 	food: Food.FoodSmokedDesertDumpling,
@@ -304,6 +310,7 @@ export const DefaultConsumes = Consumes.create({
 	mildlyIrradiatedRejuvPot: true,
 	miscConsumes: {
 		boglingRoot: false,
+		greaterMarkOfTheDawn: true,
 	},
 	offHandImbue: WeaponImbue.EnchantedRepellent,
 	sapperExplosive: SapperExplosive.SapperFumigator,

@@ -164,6 +164,7 @@ message PaladinOptions {
     bool IsUsingCrusaderStrikeStopAttack = 6;
     bool IsUsingExorcismStopAttack = 7;
     bool IsUsingManualStartAttack = 10;
+    int32 exorcismResetDelayMs = 11;
 
     bool righteousFury = 8;
     Blessings personalBlessing = 9;

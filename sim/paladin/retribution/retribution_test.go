@@ -364,18 +364,21 @@ var PlayerOptionsSealofRighteousness = &proto.Player_RetributionPaladin{
 }
 
 var optionsSealOfCommand = &proto.PaladinOptions{
-	Aura:        proto.PaladinAura_SanctityAura,
-	PrimarySeal: proto.PaladinSeal_Command,
+	Aura:                 proto.PaladinAura_SanctityAura,
+	PrimarySeal:          proto.PaladinSeal_Command,
+	ExorcismResetDelayMs: 300,
 }
 
 var optionsSealOfMartyrdom = &proto.PaladinOptions{
-	Aura:        proto.PaladinAura_SanctityAura,
-	PrimarySeal: proto.PaladinSeal_Martyrdom,
+	Aura:                 proto.PaladinAura_SanctityAura,
+	PrimarySeal:          proto.PaladinSeal_Martyrdom,
+	ExorcismResetDelayMs: 300,
 }
 
 var optionsSealOfMartyrdomStopAttack = &proto.PaladinOptions{
 	Aura:                            proto.PaladinAura_SanctityAura,
 	PrimarySeal:                     proto.PaladinSeal_Martyrdom,
+	ExorcismResetDelayMs:            300,
 	IsUsingCrusaderStrikeStopAttack: true,
 	IsUsingExorcismStopAttack:       true,
 	IsUsingDivineStormStopAttack:    true,
@@ -383,8 +386,9 @@ var optionsSealOfMartyrdomStopAttack = &proto.PaladinOptions{
 }
 
 var optionsSealOfRighteousness = &proto.PaladinOptions{
-	Aura:        proto.PaladinAura_SanctityAura,
-	PrimarySeal: proto.PaladinSeal_Righteousness,
+	Aura:                 proto.PaladinAura_SanctityAura,
+	PrimarySeal:          proto.PaladinSeal_Righteousness,
+	ExorcismResetDelayMs: 300,
 }
 
 var ItemFilters = core.ItemFilter{

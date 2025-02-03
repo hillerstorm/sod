@@ -126,6 +126,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecRetributionPaladin, {
 		inputs: [
 			OtherInputs.TankAssignment,
 			OtherInputs.InFrontOfTarget,
+			RetributionPaladinInputs.ExorcismResetDelayMs,
 			RetributionPaladinInputs.CrusaderStrikeStopAttack,
 			RetributionPaladinInputs.JudgementStopAttack,
 			RetributionPaladinInputs.DivineStormStopAttack,
